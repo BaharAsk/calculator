@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+
+.calculator {
+  width: 300px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 50px auto;
+}
+
+.calculator__display {
+  background-color: #1d1d1d;
+  color: #ffffff;
+  font-size: 2.5em;
+  text-align: right;
+  padding: 20px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #ccc;
+  position: relative;
+}
+
+.calculator__keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 0 0 10px 10px;
+  position: relative;
+}
+.calculator__keys button {
+  font-size: 1.5em;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.calculator__keys button.key--operator {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.calculator__keys button.key--equal {
+  background-color: #ff7f50;
+  color: #ffffff;
+  grid-row: span 4; 
+  grid-column: 4; 
+  border-radius: 10px;
+}
+
+.calculator__keys button:hover {
+  background-color: #d3d3d3;
+}
+
+.calculator__keys button[data-action="clear"] {
+  background-color: #ff6347;
+  color: #fff;
+}
+
+.calculator__keys button[data-action="decimal"] {
+  background-color: #fff8dc;
+  color: #333;
+}
